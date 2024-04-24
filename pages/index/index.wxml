@@ -1,0 +1,16 @@
+
+    <view class="container" style="background-image:linear-gradient(#FFE8EB,rgb(202, 153, 153)); height: 100%; align-items: center;">
+      <image style="border-radius: 300rpx 300rpx 52rpx 52rpx ;border:10rpx solid white; margin-bottom: 15px;" class="avatar" src="../../resources/bg.png"></image>
+    <text wx:if="{{!tablePicture}}" style="align-self: center; font-family: STKaiti; font-weight:bold ; margin: 9rpx;" > 请输入您的名字, 查询您所在的桌号:</text>
+    <text wx:if="{{!tablePicture}}" style="align-self: center; font-family: STKaiti; font-weight:bold ; margin: 9rpx; font-size: small; color: grey;"> (桌号排名不分先后)</text>
+    <input wx:if="{{!tablePicture}}" value="{{name}}" style="align-self: center; border-radius: 20rpx; border: solid 3rpx grey;height: 70rpx; width: 500rpx;margin: 15rpx; padding-left: 20rpx;box-sizing:border-box;" placeholder= "请输入姓名" bindinput="inputAction" />
+    <button wx:if="{{!tablePicture}}" style="margin: 8rpx;width: 502rpx;border-radius: 20rpx;color: white;background-color: #000000; " bindtap="getName">  获取您的桌号 </button>
+    <button wx:if="{{!tablePicture}}" style="margin: 8rpx;width: 502rpx;border-radius: 20rpx;color: #000000;background-color: white; " bindtap="togglePic"> 查看桌位图示 </button>
+    <image bindtap="togglePic" wx:if="{{tablePicture}}" style=" align-self: center; border-radius: 20rpx; margin-top: 10rpx; height: 366rpx; width: 565rpx;"  src="../../resources/tables.png"></image>
+    </view>
+    
+   
+
+
+
+
